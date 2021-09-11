@@ -1,0 +1,84 @@
+import requests
+
+# url = r'https://xkcd.com/353/'
+#
+# r = requests.get(url)
+# print(r.text)
+
+# To get image
+image = r'https://imgs.xkcd.com/comics/python.png'
+
+rimage = requests.get(image)
+
+# .content provides the bytes of the image
+# print(rimage.content)
+
+# Take the bytes and save
+# with open('comic.png', 'wb') as f:
+#     f.write(rimage.content)
+
+# Chekcing the http status of the file
+# 200 means success
+# 300 means redirect
+# 400 means client errors
+# print(rimage.status_code)
+
+
+# This is to get a simple yes or no if the status of the file works
+# print(rimage.ok)
+
+
+# Parameters are placed in a dictionary and are able to be auto placed in the url
+# payload = {'page': 2, 'count': 25}
+# url2 = r'https://httpbin.org/get'
+
+# The params is the args in get
+# r2 = requests.get(url2, params=payload)
+
+# Using .url, you can retrieve the complete web link
+# print(r2.url)
+
+# Post
+# payload2 = {'username': 'mathewos', 'password': 'testing'}
+# url3 = r'https://httpbin.org/post'
+# r3 = requests.post(url3, data=payload2)
+
+# print(r3.text)
+
+# You can use a JSON method, and returns in a dict form
+# print(r3.json())
+# r3_dict = r3.json()
+# print(r3_dict['form'])
+
+# Basic auth
+
+# r4 = requests.get('https://httpbin.org/basic-auth/corey/testing', auth=('corey', 'testing'))
+# print(r4)
+
+# You can add a timeout to make sure the program does not run forever.
+# r5 = requests.get('https://httpbin.org/delay/3', timeout=3)
+# print(r5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
